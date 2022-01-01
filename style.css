@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+:root {
+  --Pale-Blue: hsl(243, 100%, 93%);
+--Grayish-Blue: hsl(229, 7%, 55%);
+--Dark-Blue: hsl(228, 56%, 26%);
+--Very-Dark-Blue: hsl(229, 57%, 11%);
+--Gradient-1: hsl(6, 100%, 80%) ;
+--Gradient-2: hsl(335, 100%, 65%);
+
+}
+*::before,*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  background-image: url("./images/bg-desktop.png");
+  background-color: var(--Very-Dark-Blue);
+  color: var(--Pale-Blue);
+  background-position: bottom left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: 'Raleway', sans-serif;
+  overflow: hidden;
+}
+span{
+  font-weight: 700;
+}
+
+.container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1em;
+}
+.fylo-container{
+  background-color: var(--Dark-Blue);
+  -webkit-border-radius: 7px 100px 20px 20px;
+-moz-border-radius: 7px 100px 20px 20px;
+border-radius: 7px 100px 20px 20px;
+width: 25%;
+min-height: 28vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-self: left;
+margin: 0 auto;
+margin-top: 185px;
+margin-left: 20em;
+}
+.fylo-logo{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+.icon-document,.icon-folder,.icon-upload{
+  background-color:var(--Very-Dark-Blue);
+  padding: 0.8em;
+  border-radius: 10px;
+  margin: 0.2em;
+  min-height: 20px;
+}
+.documents{
+  margin-top: 2em;
+  margin-left: 2em;
+}
+.fylo-details{
+  background-color: var(--Dark-Blue);
+  width: 40%;
+  margin-right: 12em;
+  text-align: left;
+  margin-top: 15em;
+border-radius: 10px;
+}
+.fylo-details h5{
+font-weight: 400;
+margin-left: 6em;
+margin-top: 4em;
+}
+.storage-bar{
+  background-color:var(--Very-Dark-Blue);
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 20px;
+  border-radius: 10px;
+}
+.gradient{
+  width: 77%;
+  min-height: 16px;
+  background: linear-gradient(90deg, var(--Gradient-1), var(--Gradient-2));
+  border-radius: 10px;
+  margin-left: 0.2em;
+}
+.ball{
+  background-color: var(--Pale-Blue);
+  position: absolute;
+  left: 73%;
+  border-radius: 30px;
+  width: 12px;
+  min-height: 12px;
+  margin-top: 1px;
+}
+.figures{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 40px;
+  margin-top: -1.2em;
+  margin-right: 40px;
+  font-weight: 700;
+}
+.square {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  
+  padding: 0.4em 0.8em;
+  margin-right:16em;
+  
+  background: white;
+  color: hsl(229, 7%, 55%);
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1em;
+}
+.square p {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.square span {
+  font-size: 3em;
+  margin-right: 0.2em;
+  color: hsl(229, 57%, 11%);
+}
+.shape {
+  position: absolute;
+  right: 0;
+  border-top: 1.4rem solid white;
+  border-right: 1.4rem solid white;
+  border-bottom: 1.4rem solid transparent;
+  border-left: 1.4rem solid transparent;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url("./fylo-data-storage-component-master/images/bg-mobile.png");
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+  }
+  .container{
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+  }
+  .fylo-container{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  .fylo-details{
+    width: 80%;
+    margin-right: 0px;
+    margin-top: 10px;
+  }
+  .ball{
+    left: 90%;
+    position: relative;
+  }
+
+  .square{
+    width: 150px;
+    font-size: 12px;
+    position: relative;
+    top:88%;
+    margin:0 auto;
+  }
+.shape{
+  display: none;
+}
+}
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: url("./images/bg-mobile.png");
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+  }
+  .container{
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+  }
+  .fylo-container{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  .fylo-details{
+    width: 80%;
+    margin-right: 0px;
+    margin-top: 10px;
+  }
+  .ball{
+    left: 90%;
+    position: relative;
+  }
+
+  .square{
+    width: 150px;
+    font-size: 12px;
+    position: relative;
+    top:88%;
+    margin:0 auto;
+  }
+.shape{
+  display: none;
+}
+}
